@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#29B6F6</color>
+    <color name="colorPrimaryDark">#039BE5</color>
+    <color name="colorAccent">#E91E63</color>
+    <!-- Background color for app -->
+    <color name="tan_background">#FFFFFF</color>
+    <!-- Background color for fragments -->
+    <color name="place_food">#F50057</color>
+    <color name="place_mall">#512DA8</color>
+    <color name="place_historic">#9E9D24</color>
+    <color name="place_sports">#00796B</color>
+</resources>
