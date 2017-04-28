@@ -27,12 +27,12 @@ public class SportsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.places_list, container, false);
 
         final ArrayList<Place> places = new ArrayList<Place>();
-        places.add(new Place("4B Sporting Club", "Nafaa Street", R.drawable.four));
-        places.add(new Place("Streetball", "Ayye'a", R.drawable.streetball));
-        places.add(new Place("Haytham Gym", "El Wastani", R.drawable.haytham_gym));
-        places.add(new Place("Radical Fitness", "Spinneys", R.drawable.radical_fitness));
-        places.add(new Place("Flex Fitness", "Eastern Boulevard - Nour Bldg", R.drawable.flex_fitness));
-        places.add(new Place("Power Gym", "Majdelyoun Street", R.drawable.power_gym));
+        places.add(new Place(getString(R.string.fourB), getString(R.string.fourBAdd), R.drawable.four));
+        places.add(new Place(getString(R.string.streetball), getString(R.string.streetballAdd), R.drawable.streetball));
+        places.add(new Place(getString(R.string.haythamGym), getString(R.string.haythamGymAdd), R.drawable.haytham_gym));
+        places.add(new Place(getString(R.string.radical), getString(R.string.radicalAdd), R.drawable.radical_fitness));
+        places.add(new Place(getString(R.string.flex), getString(R.string.flexAdd), R.drawable.flex_fitness));
+        places.add(new Place(getString(R.string.power), getString(R.string.powerAdd), R.drawable.power_gym));
 
 
 

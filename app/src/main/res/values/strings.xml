@@ -1,5 +1,45 @@
 <resources>
     <string name="app_name">Saida Guide</string>
 
+    <string name="seaCastle">Sea Castle</string>
+    <string name="seaCastleAdd">Courniche El Baher</string>
+    
+    <string name="saintLouisCastle">Saint Louis Caste</string>
+    <string name="saintLouisCastleAdd">Takkeyeddine El Solh Street</string>
+    
+    <string name="khanFranj">Khan El Franj</string>
+    <string name="khanFranjAdd">Courniche El Baher</string>
 
+    <string name="soapMuseum">Soap Museum</string>
+    <string name="soapMuseumAdd">Moutran Street</string>
+
+    <string name="leMall">Le Mall</string>
+    <string name="leMallAdd">Hussameddine Hariri Street</string>
+
+    <string name="theSpot">The Spot</string>
+    <string name="theSpotAdd">Boulevard Nazih El Bizri</string>
+
+    <string name="fourB">4B Sporting Club</string>
+    <string name="fourBAdd">Nafaa Street</string>
+
+    <string name="streetball">Streetball</string>
+    <string name="streetballAdd">Ayye\'a</string>
+
+    <string name="haythamGym">Haytham Gym</string>
+    <string name="haythamGymAdd">El Wastani</string>
+
+    <string name="radical">Radical Fitness</string>
+    <string name="radicalAdd">Spinneys</string>
+
+    <string name="flex">Flex Fitness</string>
+    <string name="flexAdd">Eastern Boulevard - Nour Bldg</string>
+
+    <string name="power">Power Gym</string>
+    <string name="powerAdd">Majdelyoun Street</string>
+
+    <string name="spuntino">Spuntino Di Shadi</string>
+    <string name="sputinoAdd">Boulevard Nazih El Bizri</string>
+
+    <string name="pepo">Pepo\'s Diner</string>
+    <string name="pepoAdd">Abra</string>
 </resources>

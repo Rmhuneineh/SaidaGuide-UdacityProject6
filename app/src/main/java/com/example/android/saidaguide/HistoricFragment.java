@@ -28,10 +28,10 @@ public class HistoricFragment extends Fragment {
 
         final ArrayList<Place> places = new ArrayList<Place>();
 
-        places.add(new Place("Sea Castle", "Courniche El Baher", R.drawable.sea_castle));
-        places.add(new Place("Saint Louis Caste", "Takkeyeddine El Solh Street", R.drawable.saint_louis));
-        places.add(new Place("Khan El Franj", "Courniche El Baher", R.drawable.khan_franj));
-        places.add(new Place("Soap Museum", "Moutran Street", R.drawable.soap_museum));
+        places.add(new Place(getString(R.string.seaCastle), getString(R.string.seaCastleAdd), R.drawable.sea_castle));
+        places.add(new Place(getString(R.string.saintLouisCastle), getString(R.string.saintLouisCastleAdd), R.drawable.saint_louis));
+        places.add(new Place(getString(R.string.khanFranj), getString(R.string.khanFranjAdd), R.drawable.khan_franj));
+        places.add(new Place(getString(R.string.soapMuseum), getString(R.string.soapMuseumAdd), R.drawable.soap_museum));
 
         PlaceAdapter adapter = new PlaceAdapter(getActivity(), places, R.color.place_historic);
 
