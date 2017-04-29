@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Saida Guide</string>
 
+    <string name="historic">Historic</string>
+    <string name="food">Food</string>
+    <string name="mall">Malls</string>
+    <string name="sport">Sports</string>
+
     <string name="seaCastle">Sea Castle</string>
     <string name="seaCastleAdd">Courniche El Baher</string>
     

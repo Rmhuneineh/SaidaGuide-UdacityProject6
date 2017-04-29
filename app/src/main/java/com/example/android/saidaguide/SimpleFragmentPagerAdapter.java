@@ -1,5 +1,6 @@
 package com.example.android.saidaguide;
 
+import android.content.Context;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
@@ -8,11 +9,18 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 
 public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
-    public SimpleFragmentPagerAdapter(FragmentManager fm) {
+
+    Context context;
+    private String tabTitles[];
+
+    public SimpleFragmentPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
+        this.context = context;
+        tabTitles = new String[] {context.getString(R.string.historic), context.getString(R.string.food),
+                context.getString(R.string.mall), context.getString(R.string.sport)};
     }
 
-    private String tabTitles[] = new String[] { "Historic", "Food", "Malls", "Sports" };
+
 
     @Override
     public android.support.v4.app.Fragment getItem(int position) {
