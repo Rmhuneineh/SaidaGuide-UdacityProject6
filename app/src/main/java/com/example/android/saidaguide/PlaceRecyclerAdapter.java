@@ -1,5 +1,7 @@
 package com.example.android.saidaguide;
 
+import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,8 +19,10 @@ public class PlaceRecyclerAdapter extends RecyclerView.Adapter<PlaceRecyclerAdap
 
     List<Place> mPlaces;
     private int mColorResourceId;
+    Context mContext;
 
-    public PlaceRecyclerAdapter(List<Place> places, int colorResourceId) {
+    public PlaceRecyclerAdapter(Context context, List<Place> places, int colorResourceId) {
+        this.mContext = context;
         this.mPlaces = places;
         this.mColorResourceId = colorResourceId;
     }
@@ -55,7 +59,7 @@ public class PlaceRecyclerAdapter extends RecyclerView.Adapter<PlaceRecyclerAdap
         holder.placeTextView.setText(currentPlace.getName());
         holder.addressTextView.setText(currentPlace.getAddress());
         holder.imageView.setImageResource(currentPlace.getImageID());
-        holder.textContainer.setBackgroundColor(mColorResourceId);
+        holder.textContainer.setBackgroundColor(ContextCompat.getColor(mContext, mColorResourceId));
     }
 
     @Override
