@@ -3,10 +3,11 @@ package com.example.android.saidaguide;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -30,15 +31,13 @@ public class MallsFragment extends Fragment {
         places.add(new Place(getString(R.string.leMall), getString(R.string.leMallAdd), R.drawable.le_mall));
         places.add(new Place(getString(R.string.theSpot), getString(R.string.theSpotAdd), R.drawable.the_spot));
 
+        PlaceRecyclerAdapter adapter = new PlaceRecyclerAdapter(getContext(), places, R.color.place_mall);
 
+        final RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.list);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
 
-
-
-        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places, R.color.place_mall);
-
-        final ListView listView = (ListView) rootView.findViewById(R.id.list);
-
-        listView.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);
 
 
 

@@ -3,10 +3,11 @@ package com.example.android.saidaguide;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -35,13 +36,13 @@ public class SportsFragment extends Fragment {
         places.add(new Place(getString(R.string.power), getString(R.string.powerAdd), R.drawable.power_gym));
 
 
+        PlaceRecyclerAdapter adapter = new PlaceRecyclerAdapter(getContext(), places, R.color.place_sports);
 
+        final RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.list);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
 
-        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places, R.color.place_sports);
-
-        final ListView listView = (ListView) rootView.findViewById(R.id.list);
-
-        listView.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);
 
 
 

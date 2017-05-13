@@ -3,10 +3,11 @@ package com.example.android.saidaguide;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -24,7 +25,7 @@ public class HistoricFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootview = inflater.inflate(R.layout.places_list, container, false);
+        View rootView = inflater.inflate(R.layout.places_list, container, false);
 
         final ArrayList<Place> places = new ArrayList<Place>();
 
@@ -33,13 +34,16 @@ public class HistoricFragment extends Fragment {
         places.add(new Place(getString(R.string.khanFranj), getString(R.string.khanFranjAdd), R.drawable.khan_franj));
         places.add(new Place(getString(R.string.soapMuseum), getString(R.string.soapMuseumAdd), R.drawable.soap_museum));
 
-        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places, R.color.place_historic);
+        PlaceRecyclerAdapter adapter = new PlaceRecyclerAdapter(getContext(), places, R.color.place_historic);
 
-        final ListView listView = (ListView) rootview.findViewById(R.id.list);
-         listView.setAdapter(adapter);
+        final RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.list);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+
+         recyclerView.setAdapter(adapter);
 
 
-        return rootview;
+        return rootView;
     }
 
 }
